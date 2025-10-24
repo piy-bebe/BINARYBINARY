@@ -21,8 +21,8 @@ const convertToBinary = (num) => {
 const convertToDec = (binary) => {
   let res = 0;
 
-  for (let i = binary.length - 1; i != 0; i--) {
-    res += Number(binary[i]) * Math.pow(2, i);
+  for (let i = 0, j = binary.length - 1; i < binary.length; i++, j--) {
+    res += Number(binary[i]) * Math.pow(2, j);
   }
 
   return res;
